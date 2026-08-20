@@ -6,12 +6,12 @@ import MovieList from './components/MovieLits';
 import Footer from './components/Footer';
 import Greeting from './components/Greeting';
 import Card from './components/Card';
-
+import ProfileCard from './components/ProfileCard';
 
 const students = [
-  { id: 1, name: 'ฝน', year: 3 },
-  { id: 2, name: 'เต้ย', year: 2 },
-  { id: 3, name: 'มายด์', year: 4 },
+  { name: 'Kulpreya',nickname: 'earn', major:'IT',favorites: ['music', 'flower'] },
+  { name: 'Teerapong',nickname: 'ball', major:'IT',favorites: ['badminton', 'game'] },
+  { name: 'Methaporn',nickname: 'mint', major:'IT',favorites: ['mhala', 'thai tea'] },
 ];
 
 function App() {
@@ -23,7 +23,13 @@ function App() {
       </Card>
       <h1>รายชื่อนักศึกษา</h1>
       {students.map((s) => (
-        <Greeting key={s.id} name={s.name} year={s.year} /> //เอาไว้วนลูปแสดง Greeting ของนักศึกษาแต่ละคน (key เป็น id ของนักศึกษาเพื่อให้ React รู้จักแต่ละ Component ว่าเป็นคนละตัวกัน
+        <ProfileCard
+          key={s.id}
+          name={s.name}
+          nickname={s.nickname}
+          major={s.major}
+          favorites={s.favorites}
+        />
       ))}
     </div>
 
