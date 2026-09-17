@@ -6,7 +6,7 @@ import MovieGallery from "../components/MovieGallery";
 function Home() {
   return (
     <div className="p-8 text-center">
-      <h1 className="mt-8 text-2xl font-bold text-slate-800">🏠 หน้าแรก</h1>
+      <h1 className="text-3xl font-bold text-slate-800">🏠 หน้าแรก</h1>
       <p className="mt-2 text-slate-500">ยินดีต้อนรับสู่ MovieHub</p>
       
       
